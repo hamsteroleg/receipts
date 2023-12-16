@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://db.onlinewebfonts.com/c/d66fa62dabed66f2226a1b2d17da0579?family=Showcard+Gothic" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>mainpage</title>
+  <script src="app.ts" defer></script>
+</head>
+<body>
+
+<div class="slider-container" id="sliderContainer">
+  <div class="slides">
+    <div class="slide">
+      <img src="images/baner1.jpg" alt="Фото 1">
+      <div class="text-block-ph">
+        <p>New recipes of Ukrainian dishes are now available</p>
+      </div>
+    </div>
+    <div class="slide" style="background-color: #0ad600;">
+      <a href="#" class="slide2">BUY THE ENTIRE RECIPE COLLECTION FOR JUST $4.99</a>
+    </div>
+    <div class="slide" style="background-color:ghostwhite ;">
+      <a href="#" class="slide3">THERE CAN BE YOU ADD</a>
+      
+    </div>
+  </div>
+</div>
+
+<header class="header">
+    <div class="container header__inner">
+        <a href="#" class="logo">
+            <img src="images/Vector.svg" alt="logo" class="logo__img">
+            <p class="logo2">Disheeeeeeeeeees</p>
+        </a>
+        
+
+        
+    </div>
+</header>
+
+<div id="addrecept">
+  <input type="text" id="name" placeholder="enter the name of recept">
+  <input type="file" id="photo" name="photo" accept="image/*" required>
+  <label for="description">description of Your recept</label>
+  <textarea id="description" name="description" required></textarea>
+  <span id="descriptionError" class="error"></span>
+  <input type="checkbox" name="terms" id="terms">
+  <label for="terms"><a href="#" class="terrms">Term of using</a></label>
+  <button id="button">Create</button>
+</div>
+
+<h1>Popular dishes</h1>
+<div id="grid-container">
+  <div id="grid-item" onclick="navigateToPage('bograch.html')">
+    <div class="card">
+      <div class="front">
+        <img src="images/bograch.jpg" alt="bograch">
+        <div class="overlay">
+          <p>Bograch</p>
+        </div>
+      </div>
+      <div id="back">
+        <div id="back-content">
+          <p>
+            Bográc, also known as bográcsgulyás, is a Hungarian stew cooked in a traditional cauldron-like pot called a bogrács. The dish features tender meat, often beef or pork, seasoned with paprika and slow-cooked with vegetables such as onions, bell peppers, and tomatoes. Variations may include potatoes, noodles, or additional spices. Known for its robust flavors and communal preparation, bográc is a popular choice for gatherings and outdoor events, embodying the essence of Hungarian culinary tradition.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="grid-item" onclick="navigateToPage('bograch.html')">
+    <div class="card">
+      <div class="front">
+        <img src="images/uzvar.jpg" alt="uzvar">
+        <div class="overlay">
+          <p>uzvar</p>
+        </div>
+      </div>
+      <div class="back">
+        <div class="back-content">
+          <p>
+            Uzvar is a delightful Ukrainian beverage that captivates the senses with its rich and nuanced flavors. Crafted by simmering a delightful assortment of dried fruits, including apples, pears, and prunes, in water infused with sugar and occasionally heightened with aromatic spices, this concoction achieves a harmonious blend of sweetness and warmth. The careful preparation of uzvar involves coaxing out the essence of each dried fruit, allowing their natural sugars to meld and create a symphony of tastes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="grid-item" onclick="navigateToPage('bograch.html')">
+    <div class="card">
+      <div class="front">
+        <img src="images/borsch.jpg" alt="borsch">
+        <div class="overlay">
+          <p>borsch</p>
+        </div>
+      </div>
+      <div class="back">
+        <div class="back-content">
+          <p>Borscht is a hearty Eastern European soup celebrated for its distinctive deep red hue, derived from beets. This flavorful dish encompasses a medley of ingredients, including cabbage, carrots, and potatoes, complemented by the choice of meat, typically beef or pork, or vegetarian alternatives. Seasoned with garlic and dill, borscht is often garnished with a dollop of sour cream, adding a rich and creamy texture to the robust flavors of this beloved culinary creation</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="grid-item" onclick="navigateToPage('bograch.html')">
+    <div class="card">
+      <div class="front">
+        <img src="images/varenyk.jpg" alt="varenyk">
+        <div class="overlay">
+          <p>varenyk</p>
+        </div>
+      </div>
+      <div class="back">
+        <div class="back-content">
+          <p>Varenyky, also known as pierogi, are Ukrainian dumplings filled with a variety of ingredients such as potatoes, cheese, meat, or fruit. The dumplings are typically made from unleavened dough, boiled, and then either pan-fried or served with butter and sour cream. Varenyky are a versatile and beloved dish in Ukrainian cuisine, enjoyed as both a savory and sweet delicacy.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="grid-item" onclick="navigateToPage('bograch.html')">
+    <div class="card">
+      <div class="front">
+        <img src="images/chili-kon-karne.jpg" alt="chili-kon-karneh">
+        <div class="overlay">
+          <p>chili-kon-karne</p>
+        </div>
+      </div>
+      <div class="back">
+        <div class="back-content">
+          <p>
+            Chili con carne is a spicy and hearty Tex-Mex dish consisting of ground or diced meat, usually beef, cooked with chili peppers, tomatoes, onions, and a blend of spices such as cumin and garlic. Beans, often kidney beans, are commonly included in the recipe. The dish is simmered to allow the flavors to meld, resulting in a flavorful and comforting chili. It can be served on its own or accompanied by toppings like shredded cheese, sour cream, and green onions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="grid-item" onclick="navigateToPage('bograch.html')">
+    <div class="card">
+      <div class="front">
+        <img src="images/byzhenina.jpg" alt="buzhenina">
+        <div class="overlay">
+          <p>buzhenina</p>
+        </div>
+      </div>
+      <div class="back">
+        <div class="back-content">
+          <p>
+            Buzhenina is a traditional Russian dish made from cured and smoked pork. The pork is typically seasoned with a mixture of salt, sugar, and various spices before being smoked to achieve a distinctive flavor. Buzhenina is often enjoyed thinly sliced as a cold cut or can be used as a flavorful ingredient in sandwiches or various dishes. It is a popular choice during festive occasions and celebrations in Russian cuisine.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+    <div class="container footer_inner">
+        <a href="#" class="logo">
+            <img src="images/Vector.svg" alt="logo" class="logo__img">
+            <p class="logo2">Disheeeeeeeeeees</p>
+        </a>
+        <div class="footer__contact">
+            <a href="mailto:Disheeeeeeeeeees@gmail.com"
+                class="footer__contact-list-link"><b>Mail:</b>Disheeeeeeeeeees@gmail.com</a>
+            <ul class="footer__sociale">
+                <footer__socaile-item><a href="#" class="footer__socaile-link"><img src="images/apple.svg" alt=""
+                            class="fooler__sociale-img"></a></footer__socaile-item>
+                <footer__socaile-item><a href="#" class="footer__socaile-link"><img src="images/instagram.svg" alt=""
+                            class="fooler__sociale-img"></a></footer__socaile-item>
+                <footer__socaile-item><a href="#" class="footer__socaile-link"><img src="images/youtube.svg" alt=""
+                            class="fooler__sociale-img"></a></footer__socaile-item>
+                <footer__socaile-item><a href="#" class="footer__socaile-link"><img src="images/twitter.svg" alt=""
+                            class="fooler__sociale-img"></a></footer__socaile-item>
+            </ul>
+        </div>
+
+    </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,457 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F5E1A4;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    place-items: center;
+  }
+  
+  .slider-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 2s ease-in-out;
+  }
+  
+  .slide {
+    flex: 0 0 100%;
+    height: 150px;
+    overflow: hidden;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .text-block-ph {
+    position: absolute;
+    top: 65%;
+    left: 0;
+    width: 100%;
+    height: 35%;
+    background-color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-align: center;
+    font-size: 28px;
+  }
+  
+  .slide2{
+    display: flex;
+    color:white ;
+    font-size: 40px;
+    font-family: "Showcard Gothic";
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    top: 35%;
+    text-decoration: none;
+    
+    
+  
+  }
+  
+  .slide2:hover{
+    color:wheat ;
+    font-size: 41px;
+    font-family: "Showcard Gothic";
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    top: 34%;
+    text-align: center;
+    text-decoration: underline;
+  
+  }
+  
+  .slide3{
+    color:rgb(8, 5, 5) ;
+    font-size: 40px;
+    font-family: "Showcard Gothic";
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 35%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+    
+    
+  
+  }
+  
+  .slide3:hover{
+    color:rgb(56, 42, 16) ;
+    font-size: 41px;
+    font-family: "Showcard Gothic";
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 35%;
+    margin: auto;
+    text-decoration: underline;
+  
+  }
+
+
+  header {
+    background-color: #FA8072;
+    top: -10px;
+    width: 100%;
+  }
+
+  .logo{
+    display: flex;
+  }
+
+  .logo2{
+    color: #F5E1A4;
+    font-family: "Showcard Gothic";
+    font-size: clamp(10px, 5vw, 24px);
+    text-decoration: none;
+    
+  }
+  
+  .container {
+    max-width: 1100px;
+    padding: auto;
+    margin: 0 auto;
+  
+  }
+  
+  .header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4px;
+  
+  }
+  
+  .menu__list {
+    display: flex;
+    gap: 56px;
+    color: #FA8072;
+  
+  }
+
+  .menu__list-item{
+    color: #FA8072;
+    text-decoration: none;
+    font-size: clamp(10px, 5vw, 20px);
+  }
+
+  .menu__list-link{
+    color: #F5E1A4;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+
+
+
+  #addrecept{
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-family: "Showcard Gothic";
+    color: #FA8072;
+    top: 10px;
+    margin-bottom: 30px;
+    gap: 10px;
+    display: flex;
+    
+    
+
+  }
+
+  #addrecept input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-family: "Showcard Gothic";
+    background-color: #F5E1A4;
+    font-size: clamp(7px, 5vw, 14px);
+    color: #FA8072;
+    
+  }
+  
+  #photo{
+    color: #FA8072;
+    background-color: #F5E1A4;
+    font-family: "Showcard Gothic";
+    cursor: pointer;
+  }
+
+  textarea{
+    background-color: #F5E1A4;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    overflow: auto;
+
+  }
+
+
+  .terrms{
+    color: #FA8072;
+  }
+
+
+
+  #grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+
+
+
+
+
+
+
+
+  #grid-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    height: clamp(93px, 100vh, 280px);
+    width: clamp(115px, 100vh, 350px);
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    transition: 0.5s;
+    border-radius: 8px;
+    text-align: center;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+  }
+  
+  #grid-item .card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+  
+  #grid-item:hover .card {
+    transform: rotateY(180deg);
+  }
+
+  .deleteButton {
+    cursor: pointer;
+    color: red;
+    margin-left: 10px;
+  }
+  
+  #grid-item .front,
+  #grid-item .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backface-visibility: hidden;
+  }
+  
+  #grid-item .front {
+    transform: rotateY(0deg);
+  }
+  
+  #grid-item .back {
+    transform: rotateY(180deg);
+  }
+  
+  #grid-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    
+  }
+  
+  #grid-item .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    
+  }
+  
+  #grid-item .back-content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    background: #FA8072; 
+    color: #F5E1A4; 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+
+  .buttons{
+    display: flex;
+    gap: 5px;
+    padding-bottom: 8px;
+  }
+  
+  
+  #delete{
+    color: white;
+    border: none;
+    background-color: red;
+    border-radius: 3px;
+    box-shadow: 1px;
+  }
+  
+  #redact{
+    color: white;
+    border: none;
+    background-color: green;
+    border-radius: 3px;
+    box-shadow: 1px;
+  }
+  
+  
+  
+  h1{
+    text-align: center;
+    color: #FA8072;
+    font-size: clamp(13px, 5vw, 30px);
+  }
+
+  button{
+    color: #F5E1A4;
+    background-color: #FA8072;
+    border: none;
+    width: 100px;
+    height: 35px;
+    border-radius: 18px;
+    font-size: 14px;
+    font-family: "Showcard Gothic" ;
+
+  }
+
+
+
+
+  .footer {
+    background-color: #FA8072;
+    
+  }
+  
+  .footer_inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4px;
+    align-items: center;
+  }
+  
+  .footer__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #F5E1A4;
+    text-decoration: none;
+    font-family: "Showcard Gothic" ;
+  }
+
+  .footer__contact-list-link{
+    color: #F5E1A4;
+    text-decoration: none;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  
+
+
+
+
+
+
+
+
+  @media (max-width: 1000px) {
+    .slider-container{
+      display: none;
+    }
+
+    #grid-container{
+      grid-template-columns: repeat(2, 1fr);
+
+    }
+    
+  }
+
+  @media (max-width: 600px) {
+    #grid-container{
+      grid-template-columns: repeat(1, 1fr);
+
+    }
+
+  }
+
+
+
+
+  @media (max-width: 600px) {
+    #addrecept{
+      display: flex;
+      flex-wrap: wrap;
+      width: 400px;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      font-family: "Showcard Gothic";
+      color: #FA8072;
+      top: 10px;
+      margin-bottom: 30px;
+      gap: 10px;
+      font-size: 10px;
+
+    }
+
+  }
+  
