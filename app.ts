@@ -12,43 +12,69 @@ backElement.onclick = function (event: MouseEvent) {
   console.log(event.target);
 };
 
-createbutton.onclick = function () {
-  const nameValue: string = NameOfRecept.value;
-  const photoFile: File | undefined = PhotoOfRecept.files ? PhotoOfRecept.files[0] : undefined;
-  const descriptionValue: string = DescriptionOfRecept.value;
-  const checkboxChecked: boolean = checkboxInput.checked;
+createbutton.addEventListener('click', function () {
+  const nameValue = NameOfRecept.value;
+  const photoFile = PhotoOfRecept.files ? PhotoOfRecept.files[0] : undefined;
+  const descriptionValue = DescriptionOfRecept.value;
+  const checkboxChecked = checkboxInput.checked;
+
+  function showAlert(message) {
+    alert(message);
+  }
+
+  function validateForm() {
+    if (!checkboxChecked) {
+      showAlert('Please accept the terms of use.');
+      return false;
+    }
+
+    if (nameValue.length < 2) {
+      showAlert('Name must be longer than 2 letters.');
+      return false;
+    }
+
+    if (descriptionValue.length < 10) {
+      showAlert('Description must be longer than 10 letters.');
+      return false;
+    }
+
+    if (descriptionValue.length > 500) {
+      showAlert('Description must be shorter than 350 letters.');
+      return false;
+    }
+
+    return true;
+  }
+
+  function handleImageLoad(img) {
+    if (img.width > 850 || img.height > 600) {
+      showAlert('Photo dimensions should not exceed 850x600 pixels.');
+    } else if (validateForm()) {
+      addGridItem(nameValue, img.src, descriptionValue);
+    }
+  }
+
+  function handleImageError() {
+    showAlert('Error loading the image. Please choose a valid image file.');
+  }
 
   if (photoFile) {
     const img = new Image();
     img.src = URL.createObjectURL(photoFile);
 
     img.onload = function () {
-      if (img.width > 850 || img.height > 600) {
-        alert('Photo dimensions should not exceed 850x600 pixels.');
-      }
-      if (!checkboxChecked) {
-        alert('accept terms of using');
-        return;
-      }
-
-      if (nameValue.length < 2) {
-        alert('Name must be longer than 2 letters');
-        return;
-      }
-
-      if (descriptionValue.length < 10) {
-        alert('Description must be longer than 10 letters');
-        return;
-      }
-
-      if (descriptionValue.length > 500) {
-        alert('Description must be shorter than 350 letters');
-        return;
-      } else {
-        addGridItem(nameValue, img.src, descriptionValue);
-      }
+      handleImageLoad(img);
     };
 
+    img.onerror = function () {
+      handleImageError();
+    };
+  } else {
+    if (validateForm()) {
+      addGridItem(nameValue, 'default-image.jpg', descriptionValue);
+    }
+  }
+});
     img.onerror = function () {
       alert('Error loading the image. Please choose a valid image file.');
     };
